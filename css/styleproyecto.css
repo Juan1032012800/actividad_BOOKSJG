@@ -1,0 +1,120 @@
+:root{
+    /* --padding-container:100px 0; */
+    --color-title:#001A49;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 90%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    overflow: hidden;
+    /* padding: var(--padding-container); */
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: white;
+}
+.hero::before{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* capa de transparencia a la imagen */
+    background-color: maroon;
+    /* background-image: linear-gradient(180deg,#0000008c 0%,#0000008c 100%),url('/images/background.jpg'); */
+    /* adapta la imagen */
+    background-size: cover;
+    /* recorte de la imagen en el seudoelemento */
+    /* clip-path: polygon(0 0, 100% 0, 100% 14%, 0 14%); */
+    /* indica el orden de un elemento posicionado y sus descendientes en este caso el decendiente la imagen */
+    z-index: -1;
+}
+/* comienzo del nav */
+.nav{
+    height: 100%;
+    --padding-container:0;
+    display: flex;
+    align-items: center;
+
+}
+.nav__title{
+    /* peso de fuente lo hacemos mas delgado */
+    font-weight: 300;
+}
+/* ul */
+.nav__link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 1em;
+}
+/* li */
+.nav__items{
+    list-style: none;
+}
+.nav__items--button{
+    padding: 3px 30px;
+    border-radius: 32px;
+    list-style: none;
+    background-color: darkgoldenrod;
+}
+/* a de los li(elementos) */
+.nav__links{
+    color: white;
+    text-decoration: none;
+}
+.nav__menu{
+    margin-left: auto;
+    /* mostrar la posición en un monitor o en otros dispositivos de visualización que responderán a las pulsaciones en un dispositivo de entrada de texto o a las acciones en un dispositivo apuntador. */
+    cursor: pointer;
+    display: none;
+}
+.nav__img{
+    display: block;
+    width: 30px;
+}
+.nav__close{
+    display: var(--show,none);
+}
+/* comenzamos con el hero container */
+.hero__container{
+    width: 100%;
+    height: 100%;
+    /* max-width: ; */
+    display: grid;
+    --padding-container:0;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    /* padding-bottom: 100px; */
+    text-align: center;
+    background-image: linear-gradient(180deg,#0000008c 0%,#0000008c 100%),url(/images/background.jpg);
+}
+.hero__title{
+    font-size: 70px;
+}
+.hero__paragraph{
+    margin-bottom: 20px;
+}
+.cta{
+    display: inline-block;
+    background-color: #001A49;
+    /* especifica la alineación de la posición de un contenido junto con el eje apropiado en una cuadrícula */
+    justify-self: center;
+    color: white;
+    text-align: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
